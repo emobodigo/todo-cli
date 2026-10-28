@@ -1,0 +1,36 @@
+# Binary / build output
+/task
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Runtime data (user's todos live here; do not commit)
+todo.csv
+todo.csv.lock
+todo.csv.*.tmp
+
+# Coverage / profiling
+coverage.*
+*.prof
+
+# Go tooling
+go.work
+go.work.sum
+
+# OS junk
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
