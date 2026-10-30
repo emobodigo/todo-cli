@@ -153,7 +153,6 @@ gofmt -l cmd internal # list unformatted files
 
 These are current behaviours, verified against the built binary:
 
-- **`delete` can panic** on a non-last element — deleting any task other than the last one raises `index out of range` because the slice is mutated while being iterated. Deleting the final task works.
 - **Invalid or unknown IDs fail silently** — `task complete abc` prints the raw `strconv.Atoi` error twice and `task complete 99` prints nothing; both exit `0` and leave the file untouched.
 - **The lock does not cover the write** — `saveTodo` reopens the file with `os.Create`, so the lock acquired on the read handle protects readers only, not the rewrite.
 - **Empty tasks are accepted** — `task add ""` writes a row with an empty description.
