@@ -126,6 +126,7 @@ func Delete(id string) {
 		}
 		if list[i].Id == idInt {
 			list = append(list[:i], list[i+1:]...)
+			break
 		}
 	}
 	err = saveTodo(list)
